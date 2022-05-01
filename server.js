@@ -102,9 +102,6 @@ app.get('/api/animals/:id', (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`API server no on port ${PORT}!`);
-});
 
 app.post('/api/animals', (req, res) => {
     // set id based on what the next index of the array will be
@@ -117,4 +114,7 @@ app.post('/api/animals', (req, res) => {
         const animal = createNewAnimal(req.body, animals);
         res.json(animal);
     }
+});
+app.listen(PORT, () => {
+    console.log(`API server no on port ${PORT}!`);
 });
